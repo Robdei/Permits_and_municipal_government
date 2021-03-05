@@ -1,0 +1,1 @@
+curl -L "https://ffiec.cfpb.gov/v2/data-browser-api/view/csv?states=CA&years=2018&actions_taken=4" >> "test.csv"
