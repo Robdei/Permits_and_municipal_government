@@ -1,0 +1,121 @@
+Adelanto
+Alameda
+Albany
+Alhambra
+Anaheim
+Arcadia
+Bakersfield
+Bell
+Berkeley
+Big Bear Lake
+Buena Park
+Burbank
+Carlsbad
+Cerritos
+Chico
+Chula Vista
+Compton
+Culver City
+Cypress
+Del Mar
+Desert Hot Springs
+Dinuba
+Downey
+El Cajon
+El Centro
+Eureka
+Exeter
+Folsom
+Fortuna
+Fresno
+Gilroy
+Glendale
+Grass Valley
+Hayward
+Huntington Beach
+Indian Wells
+Industry
+Inglewood
+Irvine
+Irwindale
+King City
+Kingsburg
+Lancaster
+La Quinta
+Lemoore
+Lindsay
+Loma Linda
+Long Beach
+Los Alamitos
+Los Angeles
+Marina
+Marysville
+Merced
+Modesto
+Monterey
+Mountain View
+Napa
+Needles
+Newport Beach
+Norco
+Oakland
+Oceanside
+Oroville
+Pacific Grove
+Palm Desert
+Palm Springs
+Palmdale
+Palo Alto
+Pasadena
+Petaluma
+Piedmont
+Placentia
+Pomona
+Port Hueneme
+Porterville
+Rancho Mirage
+Redondo Beach
+Redwood City
+Richmond
+Riverside
+Roseville
+Sacramento
+Salinas
+San Bernardino
+San Diego
+San Francisco
+San Jose
+San Leandro
+San Luis Obispo
+San Marcos
+San Mateo
+San Rafael
+San Ramon
+Sand City
+Santa Ana
+Santa Barbara
+Santa Clara
+Santa Cruz
+Santa Maria
+Santa Monica
+Santa Rosa
+Santee
+Seal Beach
+Shafter
+Signal Hill
+Solvang
+Stockton
+Sunnyvale
+Temple City
+Torrance
+Truckee
+Tulare
+Vallejo
+Ventura
+Vernon
+Victorville
+Visalia
+Vista
+Watsonville
+Whittier
+Woodlake
