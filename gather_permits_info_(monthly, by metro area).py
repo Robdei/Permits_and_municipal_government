@@ -32,3 +32,5 @@ join_funcs.join_on_exact_match(permits_filename='permits_data/all_permits.csv',
 join_funcs.join_on_fuzzy_match(permits_filename='permits_data/Population_and_Permits_by_metro_(Exact match).csv',
 							   population_filename='permits_data/cbsa-population.csv')\
 		  .to_csv('Population_and_Permits_by_metro_(Exact+Fuzzy_match).csv',index=False)
+
+os.remove('permits_data/Population_and_Permits_by_metro_(Exact match).csv')
