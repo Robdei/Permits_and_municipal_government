@@ -113,16 +113,30 @@ file = open(path_to_txts+'city_charters/California Charter Cities.txt','r')
 charter_cities = file.read().split('\n')
 file.close()
 
-charter_cities_df = pd.DataFrame([(city.upper() + ', CA','charter') for city in charter_cities],
-								columns=["Permit Authority", "city form"]
+charter_cities_df = pd.DataFrame([(city.upper() + ', CA','Charter') for city in charter_cities],
+								columns=["Permit Authority", "City gov type"]
 								)
 ret_df = (permits_by_authority
 		  .merge(charter_cities_df, on='Permit Authority', how='left')
 		  )
 
-ret_df['city form'] = ret_df['city form'].fillna('general law')
+ret_df['City gov type'] = ret_df['City gov type'].fillna('General Law')
 
-ret_df['city form'] = [form if 'UNINCORPORATED' not in authority else 'county' for form, authority
-					   in zip(ret_df['city form'],ret_df['Permit Authority'])]
+ret_df['City gov type'] = [form if 'UNINCORPORATED' not in authority else 'County' for form, authority
+					  		 in zip(ret_df['City gov type'],ret_df['Permit Authority'])]
 
-ret_df.to_csv(f'permits_by_permitting_authority.csv',index=False)
+# determine organization of county
+county_types = pd.read_excel('permits_data/permits_by_authority/city_charters/county government type (wikipedia).xlsx') \
+                .dropna() \
+                .rename(columns={'county':'County', 'gov type':'County gov type', 'population':'County population'}) \
+                .reset_index(drop=True) \
+                [['County', 'County gov type', 'County population']]
+
+for row in range(len(county_types)):
+    if county_types.County[row]=='San Francisco':
+        county_types.County[row]='San Francisco County'
+
+permits_by_authority = ret_df.merge(county_types, on='County', how='left')
+
+
+permits_by_authority.to_csv(f'permits_by_permitting_authority.csv',index=False)
