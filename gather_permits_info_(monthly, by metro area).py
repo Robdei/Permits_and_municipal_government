@@ -14,7 +14,7 @@ for date in retval[:-2]:
 	try:
 		year = date.split('-')[0]
 		month = date.split('-')[1]
-		txt_funcs.download_permits_data(year,month)
+		txt_funcs.download_text_permits_data(year,month)
 		print(f'downloaded {year}/{month}')
 		txt_funcs.preprocess_txt(f'{year}-{month}.txt')
 		txt_funcs.txt_to_csv(f'{year}-{month}_processed.txt')

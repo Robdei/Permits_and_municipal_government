@@ -4,8 +4,20 @@ import csv
 import os, glob
 import re
 
+def download_csv_permits_data(year, month):
+	# month and year must be strings
+	assert type(year) == str and type(month) == str, "year and month parameters should be strings"
 
-def download_permits_data(year, month):
+	# check that month and year are in the correct format
+	url = year + month
+
+	# download data
+	if f"{year}-{month}.txt" in os.listdir():
+		os.remove(f"{year}-{month}.csv")
+	os.system(f"curl https://www.census.gov/construction/bps/xls/msamonthly_{url}.xls >> {year}-{month}.csv")
+
+
+def download_text_permits_data(year, month):
 	"""
 	Function that will download monthly permits data (in .txt format) from the census bureau
 
